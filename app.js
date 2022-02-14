@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const auth = require('./middleware/auth');
 
 const app = express();
-app.use(express.json());
+app.use(express.json()); // convert request body to json
 
 // register user endpoint
 app.post("/register", async (req, res) => {
